@@ -1,0 +1,158 @@
+{
+  "uid" : "7f63af6a0de0cbb",
+  "name" : "test_send_new_mail",
+  "fullName" : "src.tests.test_email_sending_yandex#test_send_new_mail",
+  "historyId" : "23d3aaf7861a9d10d369eb7e818c1de2",
+  "time" : {
+    "start" : 1592053014499,
+    "stop" : 1592053019720,
+    "duration" : 5221
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Найденное значение не является кол-вом писем\nassert False == True\n +  where False = is_positive_number('')",
+  "statusTrace" : "driver = <selenium.webdriver.remote.webdriver.WebDriver (session=\"7c76686beff369f02e80352b75a9ac94\")>\n\n    def test_send_new_mail(driver):\n        authorization_page = to_authorization_page(driver)\n        authorization_page.enter_login(\"login\")\n        authorization_page.enter_password(\"password\")\n    \n        send_new_mail_page = SendNewMailPageYandex(driver)\n        mails_count = send_new_mail_page.get_inbox_mails_count()\n    \n        #Проверка значения переданного из элемента о количестве писем\n>       assert is_positive_number(\n            mails_count) == True, \"Найденное значение не является кол-вом писем\"\nE       AssertionError: Найденное значение не является кол-вом писем\nE       assert False == True\nE        +  where False = is_positive_number('')\n\nsrc\\tests\\test_email_sending_yandex.py:69: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1592053010812,
+      "stop" : 1592053010812,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1592052974463,
+      "stop" : 1592052974463,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1592052974463,
+      "stop" : 1592052974463,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1592052974463,
+      "stop" : 1592052974464,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1592052974464,
+      "stop" : 1592052974464,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1592053010812,
+      "stop" : 1592053014499,
+      "duration" : 3687
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1592053019895,
+      "stop" : 1592053019956,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "src.tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_email_sending_yandex"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QJMAO5E"
+  }, {
+    "name" : "thread",
+    "value" : "7896-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.tests.test_email_sending_yandex"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7f63af6a0de0cbb.json",
+  "parameterValues" : [ ]
+}

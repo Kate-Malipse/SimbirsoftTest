@@ -15,7 +15,8 @@ def driver(pytestconfig):
 
     # # Local driver
     if is_debug:
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome()
+        
     # # Grid Remote: send arguments to Hub
     else:
         node_port = pytestconfig.getoption("node_port")

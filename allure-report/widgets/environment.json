@@ -1,0 +1,19 @@
+[ {
+  "values" : [ "77.0.1" ],
+  "name" : "Browser.Version.Firefox"
+}, {
+  "values" : [ "Chrome" ],
+  "name" : "Browser.Node1"
+}, {
+  "values" : [ "Firefox" ],
+  "name" : "Browser.Node2"
+}, {
+  "values" : [ "GRID" ],
+  "name" : "Hub"
+}, {
+  "values" : [ "Windows" ],
+  "name" : "Platform"
+}, {
+  "values" : [ "83.0.4103.97" ],
+  "name" : "Browser.Version.Chrome"
+} ]

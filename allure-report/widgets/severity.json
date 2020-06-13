@@ -1,0 +1,101 @@
+[ {
+  "uid" : "7673905d14e61e93",
+  "name" : "test_send_new_mail",
+  "time" : {
+    "start" : 1592068123434,
+    "stop" : 1592068156205,
+    "duration" : 32771
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "abb8671d42465eaa",
+  "name" : "test_password_positve",
+  "time" : {
+    "start" : 1592064401173,
+    "stop" : 1592064409577,
+    "duration" : 8404
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "caad8f5fd22b9a0e",
+  "name" : "test_password_negative",
+  "time" : {
+    "start" : 1592068119595,
+    "stop" : 1592068119595,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "5d72588cb097956b",
+  "name" : "test_send_new_mail",
+  "time" : {
+    "start" : 1592064420638,
+    "stop" : 1592064439208,
+    "duration" : 18570
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e92489b66af9924a",
+  "name" : "test_login_positve",
+  "time" : {
+    "start" : 1592064384366,
+    "stop" : 1592064390941,
+    "duration" : 6575
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f8940c4c7abc4b19",
+  "name" : "test_login_negative",
+  "time" : {
+    "start" : 1592068098428,
+    "stop" : 1592068098429,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "7eb8c0a88613b5d4",
+  "name" : "test_password_negative",
+  "time" : {
+    "start" : 1592064413994,
+    "stop" : 1592064416849,
+    "duration" : 2855
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5392a19395dc2bdc",
+  "name" : "test_login_negative",
+  "time" : {
+    "start" : 1592064394683,
+    "stop" : 1592064397449,
+    "duration" : 2766
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9da40bdb7becba36",
+  "name" : "test_login_positve",
+  "time" : {
+    "start" : 1592068079815,
+    "stop" : 1592068094349,
+    "duration" : 14534
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "aad732f1e0f27fd8",
+  "name" : "test_password_positve",
+  "time" : {
+    "start" : 1592068102204,
+    "stop" : 1592068115731,
+    "duration" : 13527
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

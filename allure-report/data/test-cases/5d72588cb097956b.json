@@ -1,0 +1,194 @@
+{
+  "uid" : "5d72588cb097956b",
+  "name" : "test_send_new_mail",
+  "fullName" : "src.tests.test_email_sending_yandex#test_send_new_mail",
+  "historyId" : "23d3aaf7861a9d10d369eb7e818c1de2",
+  "time" : {
+    "start" : 1592064420638,
+    "stop" : 1592064439208,
+    "duration" : 18570
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1592064416913,
+      "stop" : 1592064416913,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1592064381271,
+      "stop" : 1592064381271,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1592064416913,
+      "stop" : 1592064420637,
+      "duration" : 3724
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1592064381271,
+      "stop" : 1592064381271,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1592064381271,
+      "stop" : 1592064381271,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1592064381271,
+      "stop" : 1592064381271,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1592064439210,
+      "stop" : 1592064439317,
+      "duration" : 107
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "src.tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_email_sending_yandex"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QJMAO5E"
+  }, {
+    "name" : "thread",
+    "value" : "16224-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.tests.test_email_sending_yandex"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e2b3c64258ebcd38",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '06-13-2020 1...е. Малеванная' == '06-13-2020 1...е. Малеванная'\n  - 06-13-2020 19:04:09 Тестовое задание. Малеванная\n  ?                ^ ^^\n  + 06-13-2020 19:01:56 Тестовое задание. Малеванная\n  ?                ^ ^^",
+      "time" : {
+        "start" : 1592064244044,
+        "stop" : 1592064263169,
+        "duration" : 19125
+      }
+    }, {
+      "uid" : "2a99ce11cf2c2680",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: Найденное значение не является кол-вом писем\nassert False == True\n +  where False = <built-in method isdigit of str object at 0x000001A2103422F0>()\n +    where <built-in method isdigit of str object at 0x000001A2103422F0> = ''.isdigit",
+      "time" : {
+        "start" : 1592058748947,
+        "stop" : 1592058753465,
+        "duration" : 4518
+      }
+    }, {
+      "uid" : "2b293202ec516be4",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: Найденное значение не является кол-вом писем\nassert False == True\n +  where False = <built-in method isdigit of str object at 0x0000017D8F3522F0>()\n +    where <built-in method isdigit of str object at 0x0000017D8F3522F0> = ''.isdigit",
+      "time" : {
+        "start" : 1592058277706,
+        "stop" : 1592058282903,
+        "duration" : 5197
+      }
+    }, {
+      "uid" : "7f63af6a0de0cbb",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: Найденное значение не является кол-вом писем\nassert False == True\n +  where False = is_positive_number('')",
+      "time" : {
+        "start" : 1592053014499,
+        "stop" : 1592053019720,
+        "duration" : 5221
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5d72588cb097956b.json",
+  "parameterValues" : [ ]
+}

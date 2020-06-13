@@ -1,0 +1,158 @@
+{
+  "uid" : "e2b3c64258ebcd38",
+  "name" : "test_send_new_mail",
+  "fullName" : "src.tests.test_email_sending_yandex#test_send_new_mail",
+  "historyId" : "23d3aaf7861a9d10d369eb7e818c1de2",
+  "time" : {
+    "start" : 1592064244044,
+    "stop" : 1592064263169,
+    "duration" : 19125
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '06-13-2020 1...е. Малеванная' == '06-13-2020 1...е. Малеванная'\n  - 06-13-2020 19:04:09 Тестовое задание. Малеванная\n  ?                ^ ^^\n  + 06-13-2020 19:01:56 Тестовое задание. Малеванная\n  ?                ^ ^^",
+  "statusTrace" : "driver = <selenium.webdriver.remote.webdriver.WebDriver (session=\"9f8075fe7ae6c7ce9600fa7e52dda00e\")>\n\n    def test_send_new_mail(driver):\n        authorization_page = to_authorization_page(driver)\n        authorization_page.enter_login(\"login\")\n        authorization_page.enter_password(\"password\")\n    \n        send_new_mail_page = SendNewMailPageYandex(driver)\n        mails_count_string = send_new_mail_page.get_inbox_mails_count_string()\n    \n        mails_count = find_number_in_string(mails_count_string)\n    \n        #Проверка значения переданного из элемента о количестве писем\n        assert mails_count.isdigit() == True, \"Найденное значение не является кол-вом писем\"\n    \n        current_datetime = datetime.now().strftime(\"%m-%d-%Y %H:%M:%S\")\n        topic = f\"{current_datetime} Тестовое задание. Малеванная\"\n    \n        send_new_mail_page.send_new_mail(\"login\", topic, mails_count)\n    \n        #Ожидаем когда отправиться письмо и проверяем его в отправленных\n        time.sleep(10)\n        last_topic = send_new_mail_page.get_last_sent_mail_topic()\n>       assert last_topic == topic\nE       AssertionError: assert '06-13-2020 1...е. Малеванная' == '06-13-2020 1...е. Малеванная'\nE         - 06-13-2020 19:04:09 Тестовое задание. Малеванная\nE         ?                ^ ^^\nE         + 06-13-2020 19:01:56 Тестовое задание. Малеванная\nE         ?                ^ ^^\n\nsrc\\tests\\test_email_sending_yandex.py:72: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1592064240405,
+      "stop" : 1592064244043,
+      "duration" : 3638
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1592064204860,
+      "stop" : 1592064204860,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1592064240405,
+      "stop" : 1592064240405,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1592064204859,
+      "stop" : 1592064204859,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1592064204860,
+      "stop" : 1592064204860,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "pytestconfig",
+    "time" : {
+      "start" : 1592064204860,
+      "stop" : 1592064204860,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1592064263339,
+      "stop" : 1592064263411,
+      "duration" : 72
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "src.tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_email_sending_yandex"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QJMAO5E"
+  }, {
+    "name" : "thread",
+    "value" : "13000-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.tests.test_email_sending_yandex"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e2b3c64258ebcd38.json",
+  "parameterValues" : [ ]
+}

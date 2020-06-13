@@ -1,0 +1,196 @@
+{
+  "f22e4daab05720b5d1425a0d4afae324" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aad732f1e0f27fd8",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('id', 'identifierId')",
+      "time" : {
+        "start" : 1592068102204,
+        "stop" : 1592068115731,
+        "duration" : 13527
+      }
+    } ]
+  },
+  "a529fe40a49cc9687f8ccb9b3bfe4aca" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9da40bdb7becba36",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('id', 'identifierId')",
+      "time" : {
+        "start" : 1592068079815,
+        "stop" : 1592068094349,
+        "duration" : 14534
+      }
+    } ]
+  },
+  "4dc54751dd487b345df4b2af89fd4250" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e92489b66af9924a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592064384366,
+        "stop" : 1592064390941,
+        "duration" : 6575
+      }
+    } ]
+  },
+  "94332b1f432cd71dee6f2ad9948732b6" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7eb8c0a88613b5d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592064413994,
+        "stop" : 1592064416849,
+        "duration" : 2855
+      }
+    } ]
+  },
+  "7f6036afeadf59b21933f3241ba00d65" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5392a19395dc2bdc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592064394683,
+        "stop" : 1592064397449,
+        "duration" : 2766
+      }
+    } ]
+  },
+  "e00d3959db139390b0caaca5c909614e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "caad8f5fd22b9a0e",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: Пропуск теста",
+      "time" : {
+        "start" : 1592068119595,
+        "stop" : 1592068119595,
+        "duration" : 0
+      }
+    } ]
+  },
+  "b7336694418b70f51f08fb25e56c0371" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f8940c4c7abc4b19",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: Пропуск теста",
+      "time" : {
+        "start" : 1592068098428,
+        "stop" : 1592068098429,
+        "duration" : 1
+      }
+    } ]
+  },
+  "23d3aaf7861a9d10d369eb7e818c1de2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5d72588cb097956b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592064420638,
+        "stop" : 1592064439208,
+        "duration" : 18570
+      }
+    } ]
+  },
+  "b484defbd8268a2f8912c431c7d5adfa" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "abb8671d42465eaa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592064401173,
+        "stop" : 1592064409577,
+        "duration" : 8404
+      }
+    } ]
+  },
+  "e60dbbfdd717a066580b11180df8520a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7673905d14e61e93",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592068123434,
+        "stop" : 1592068156205,
+        "duration" : 32771
+      }
+    } ]
+  }
+}

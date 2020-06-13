@@ -142,6 +142,8 @@ dmypy.json
 # Ignore all local history of files
 .history
 
+### My Files ###
 geckodriver*
+chromedriver*
 SeleniumGrid/*
 !SeleniumGrid/NodeConfig.json

@@ -6,7 +6,7 @@ from src.pages.YandexPages import AuthorizationPageYandex
 from src.pages.YandexPages import SendNewMailPageYandex
 
 
-#Вспомогательные функции
+# Вспомогательные функции
 def to_authorization_page(driver):
     authorization_page = AuthorizationPageYandex(driver)
     authorization_page.go_to_site("https://mail.yandex.ru/")
@@ -14,16 +14,7 @@ def to_authorization_page(driver):
 
     return authorization_page
 
-def is_positive_number(string):
-    try:
-        number = int(string)
-
-        return number >= 0
-    except:
-        return False
-
-
-#Тесты
+# Тесты
 #1 Тест ввода верного логина
 def test_login_positve(driver):
     authorization_page = to_authorization_page(driver)
@@ -63,22 +54,27 @@ def test_send_new_mail(driver):
     authorization_page.enter_password("password")
 
     send_new_mail_page = SendNewMailPageYandex(driver)
-    mails_count = send_new_mail_page.get_inbox_mails_count()
+    mails_count_string = send_new_mail_page.get_inbox_mails_count_string()
 
-    #Проверка значения переданного из элемента о количестве писем 
-    assert is_positive_number(
-        mails_count) == True, "Найденное значение не является кол-вом писем"
+    mails_count = find_number_in_string(mails_count_string)
+
+    # Проверка значения переданного из элемента о количестве писем 
+    assert mails_count.isdigit() == True, "Найденное значение не является кол-вом писем"
 
     current_datetime = datetime.now().strftime("%m-%d-%Y %H:%M:%S")
     topic = f"{current_datetime} Тестовое задание. Малеванная"
 
-    send_new_mail_page.send_new_mail(
-        "example@mail.ru", topic, mails_count)
+    send_new_mail_page.send_new_mail("example@mail.ru", topic, mails_count)
 
-    #Ожидаем когда отправиться письмо и проверяем его в отправленных
+    # Ожидаем когда отправиться письмо и проверяем его в отправленных
     time.sleep(10)
     last_topic = send_new_mail_page.get_last_sent_mail_topic()
     assert last_topic == topic
 
-
-
+# Функция поиска цифр из строки(для mails_count)
+def find_number_in_string(string):
+    number = ""
+    for i in string:
+        if i.isnumeric():
+            number += i
+    return number 

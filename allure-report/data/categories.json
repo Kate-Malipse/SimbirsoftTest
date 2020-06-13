@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('id', 'identifierId')",
+      "children" : [ {
+        "name" : "test_login_positve",
+        "uid" : "9da40bdb7becba36",
+        "parentUid" : "5a57bc8d3fdf99818964131b59eac2f2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592068079815,
+          "stop" : 1592068094349,
+          "duration" : 14534
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_password_positve",
+        "uid" : "aad732f1e0f27fd8",
+        "parentUid" : "5a57bc8d3fdf99818964131b59eac2f2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592068102204,
+          "stop" : 1592068115731,
+          "duration" : 13527
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5a57bc8d3fdf99818964131b59eac2f2"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}
