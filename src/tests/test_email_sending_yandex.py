@@ -15,22 +15,28 @@ def to_authorization_page(driver):
     return authorization_page
 
 # Тесты
-#1 Тест ввода верного логина
+# 1 Тест ввода верного логина
+
+
 def test_login_positve(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("login")
     with pytest.raises(TimeoutException):
         authorization_page.get_enter_error()
 
-#2 Тест ввода неверного логина
+# 2 Тест ввода неверного логина
+
+
 def test_login_negative(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("wrong_login")
 
     error_message = authorization_page.get_enter_error()
-    assert not error_message == False
+    assert len(error_message.strip()) > 0
 
-#3 Тест ввода верного пароля
+# 3 Тест ввода верного пароля
+
+
 def test_password_positve(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("login")
@@ -38,16 +44,20 @@ def test_password_positve(driver):
     with pytest.raises(TimeoutException):
         authorization_page.get_enter_error()
 
-#4 Тест ввода неверного пароля
+# 4 Тест ввода неверного пароля
+
+
 def test_password_negative(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("login")
     authorization_page.enter_password("qwerty1234")
 
     error_message = authorization_page.get_enter_error()
-    assert not error_message == False
+    assert len(error_message.strip()) > 0
 
-#5 Тест отправки нового письма (позитивный сценарий)
+# 5 Тест отправки нового письма (позитивный сценарий)
+
+
 def test_send_new_mail(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("login")
@@ -58,7 +68,7 @@ def test_send_new_mail(driver):
 
     mails_count = find_number_in_string(mails_count_string)
 
-    # Проверка значения переданного из элемента о количестве писем 
+    # Проверка значения переданного из элемента о количестве писем
     assert mails_count.isdigit() == True, "Найденное значение не является кол-вом писем"
 
     current_datetime = datetime.now().strftime("%m-%d-%Y %H:%M:%S")
@@ -72,9 +82,11 @@ def test_send_new_mail(driver):
     assert last_topic == topic
 
 # Функция поиска цифр из строки(для mails_count)
+
+
 def find_number_in_string(string):
     number = ""
     for i in string:
         if i.isnumeric():
             number += i
-    return number 
+    return number

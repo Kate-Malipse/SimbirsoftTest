@@ -1,7 +1,7 @@
 import time
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from src.base.Base import BasePage
+
 
 class Locators:
     LOCATOR_LOG_IN_BUTTON = (By.CLASS_NAME, "s-btn__filled")
@@ -11,15 +11,18 @@ class Locators:
     LOCATOR_PASS_ELEMENT = (By.NAME, "password")
     LOCATOR_LOGIN_PASSWORD_ERROR_ELEMENT = (By.CLASS_NAME, "o6cuMc")
     LOCATOR_NEXT_PASS_BUTTON = (By.ID, "passwordNext")
-    LOCATOR_MAIL_LIST = (By.CSS_SELECTOR, 'div.J-J5-Ji.amH.J-JN-I > span:nth-child(1) > span:nth-child(2)')
+    LOCATOR_MAIL_LIST = (
+        By.CSS_SELECTOR, 'div.J-J5-Ji.amH.J-JN-I > span:nth-child(1) > span:nth-child(2)')
     LOCATOR_NEW_MAIL_BUTTON = (By.CLASS_NAME, "T-I-KE")
     LOCATOR_NEW_MAIL_TO = (By.NAME, "to")
     LOCATOR_NEW_MAIL_TOPIC = (By.NAME, "subjectbox")
     LOCATOR_NEW_MAIL_TEXT = (By.CLASS_NAME, "tS-tW")
     LOCATOR_NEW_MAIL_SEND_BUTTON = (By.CLASS_NAME, "aoO.v7")
     LOCATOR_SENT_BOX_BUTTON = (By.CSS_SELECTOR, "a[href$='#sent']")
-    LOCATOR_LAST_MAIL_ELEMENT = (By.CSS_SELECTOR, "div.UI > div:nth-child(2) > div:nth-child(1) > table > tbody > tr:first-child > td.a4W")
+    LOCATOR_LAST_MAIL_ELEMENT = (
+        By.CSS_SELECTOR, "div.UI > div:nth-child(2) > div:nth-child(1) > table > tbody > tr:first-child > td.a4W")
     LOCATOR_LAST_MAIL_TOPIC_ELEMENT = (By.CSS_SELECTOR, "h2.hP")
+
 
 class AuthorizationPageGoogle(BasePage):
 
@@ -32,13 +35,14 @@ class AuthorizationPageGoogle(BasePage):
         login_element.send_keys(login)
         self.find_and_click(Locators.LOCATOR_NEXT_LOG_BUTTON, 1)
 
-    def enter_password (self, password):
+    def enter_password(self, password):
         pass_element = self.find_element(Locators.LOCATOR_PASS_ELEMENT)
         pass_element.send_keys(password)
         self.find_and_click(Locators.LOCATOR_NEXT_PASS_BUTTON, 1)
 
     def get_enter_error(self):
         return self.find_element(Locators.LOCATOR_LOGIN_PASSWORD_ERROR_ELEMENT, 5).text
+
 
 class SendNewMailPageGoogle(BasePage):
 
@@ -51,7 +55,7 @@ class SendNewMailPageGoogle(BasePage):
         self.find_and_click(Locators.LOCATOR_NEW_MAIL_BUTTON)
 
         new_mail_to = self.find_element(Locators.LOCATOR_NEW_MAIL_TO)
-        #Ждем анимацию открытия поля "Кому"
+        # Ждем анимацию открытия поля "Кому"
         time.sleep(1)
         new_mail_to.send_keys(to)
 

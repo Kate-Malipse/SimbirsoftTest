@@ -13,11 +13,11 @@ def pytest_addoption(parser):
 def driver(pytestconfig):
     is_debug = bool(pytestconfig.getoption("debug"))
 
-    # # Local driver
+    # Local driver
     if is_debug:
         driver = webdriver.Chrome()
-        
-    # # Grid Remote: send arguments to Hub
+
+    # Grid Remote: send arguments to Hub
     else:
         node_port = pytestconfig.getoption("node_port")
         browser_name = pytestconfig.getoption("browser")
