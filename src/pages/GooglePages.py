@@ -1,6 +1,6 @@
 import time
-from selenium.webdriver.common.by import By
 from src.base.Base import BasePage
+from selenium.webdriver.common.by import By
 
 
 class Locators:

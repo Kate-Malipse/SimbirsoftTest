@@ -1,13 +1,11 @@
-import pytest
 import time
+import pytest
 from datetime import datetime
 from selenium.webdriver.support.wait import TimeoutException
 from src.pages.GooglePages import AuthorizationPageGoogle
 from src.pages.GooglePages import SendNewMailPageGoogle
 
 # Вспомогательные функции
-
-
 def to_authorization_page(driver):
     authorization_page = AuthorizationPageGoogle(driver)
     # Авторизация через stackoverflow
@@ -18,8 +16,6 @@ def to_authorization_page(driver):
 
 # Тесты
 # 1 Тест ввода верного логина
-
-
 def test_login_positve(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("login")
@@ -27,8 +23,6 @@ def test_login_positve(driver):
         authorization_page.get_enter_error()
 
 # 2 Тест ввода неверного логина
-
-
 def test_login_negative(driver):
     #pytest.skip("Пропуск теста")
     authorization_page = to_authorization_page(driver)
@@ -38,8 +32,6 @@ def test_login_negative(driver):
     assert len(error_message.strip()) > 0
 
 # 3 Тест ввода верного пароля
-
-
 def test_password_positve(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("login")
@@ -48,8 +40,6 @@ def test_password_positve(driver):
         authorization_page.get_enter_error()
 
 # 4 Тест ввода неверного пароля
-
-
 def test_password_negative(driver):
     #pytest.skip("Пропуск теста")
     authorization_page = to_authorization_page(driver)
@@ -60,8 +50,6 @@ def test_password_negative(driver):
     assert len(error_message.strip()) > 0
 
 # 5 Тест отправки нового письма (позитивный сценарий)
-
-
 def test_send_new_mail(driver):
     authorization_page = to_authorization_page(driver)
     authorization_page.enter_login("login")
@@ -72,7 +60,7 @@ def test_send_new_mail(driver):
     mails_count = send_new_mail_page.get_inbox_mails_count()
 
     # Проверка значения переданного из элемента о количестве писем
-    assert mails_count.isdigit() == True, "Найденное значение не является кол-вом писем"
+    assert mails_count.isdigit() is True, "Найденное значение не является кол-вом писем"
 
     current_datetime = datetime.now().strftime("%m-%d-%Y %H:%M:%S")
     topic = f"{current_datetime} Тестовое задание. Малеванная"
@@ -83,3 +71,4 @@ def test_send_new_mail(driver):
     time.sleep(10)
     last_topic = send_new_mail_page.get_last_sent_mail_topic()
     assert last_topic == topic
+
